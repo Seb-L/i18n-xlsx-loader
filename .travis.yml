@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - 11
+
+jobs:
+  include:
+    # - stage: test
+    #   before_script: yarn
+    #   script:
+    #     - yarn test
+
+    - stage: build
+      before_script: yarn
+      script:
+        - yarn build
+
+    # Define the release stage that runs semantic-release
+    - stage: release
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release
