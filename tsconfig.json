@@ -1,17 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2017",
     "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "outDir": "dist",
     "sourceMap": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strict": true
+    "noImplicitThis": false,
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "noImplicitAny": true,
+    "strict": true,
+    "declaration": true,
+    "types": [
+      "@types/webpack",
+      "@types/object-path",
+      "@types/jest"
+    ]
   },
   "include": [
-    "src/index.ts"
+    "src"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    "test"
   ]
 }

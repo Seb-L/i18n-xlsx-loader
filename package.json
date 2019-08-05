@@ -1,5 +1,5 @@
 {
-  "name": "i18n-xlsx-loader",
+  "name": "@seb-l/i18n-xlsx-loader",
   "version": "0.0.0-development",
   "description": "Directly import an XLSX file in your project as source for i18n locales messages.",
   "main": "dist/index.js",
@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "eslint ./src/* --fix",
     "build": "tsc",
+    "dev": "tsc -W",
     "test": "jest",
     "semantic-release": "semantic-release"
   },
@@ -36,6 +37,8 @@
     "@semantic-release/npm": "^5.1.13",
     "@semantic-release/release-notes-generator": "^7.2.1",
     "@types/jest": "^24.0.16",
+    "@types/object-path": "^0.11.0",
+    "@types/webpack": "^4.32.1",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^6.1.0",
@@ -43,12 +46,15 @@
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^3.0.2",
     "jest": "^24.8.0",
+    "memory-fs": "^0.4.1",
     "prettier": "^1.18.2",
     "semantic-release": "^15.13.19",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.0"
   },
   "dependencies": {
+    "object-path": "^0.11.4",
     "xlsx": "^0.14.4"
   }
 }

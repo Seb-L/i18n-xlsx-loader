@@ -1,11 +1,11 @@
 {
   "extends": [
-    "eslint:recommended",
+    // "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "env": {
-    "browser": true
+    "node": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,10 +17,15 @@
     "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
     "@typescript-eslint/indent": ["error", 2],
-    "prettier/prettier": "error"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "globals": {
-    "module": false
+    "jest": false,
+    "describe": false,
+    "expect": false
   }
 }
