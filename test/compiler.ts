@@ -2,9 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const memoryfs = require('memory-fs')
 
-export default (fixture: any, options = {}) => {
-  console.info(options) // eslint-disable-line
-
+export default (fixture: any) => {
   const compiler = webpack({
     context: __dirname,
     entry: `./${fixture}`,
