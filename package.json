@@ -1,6 +1,6 @@
 {
   "name": "@seb-l/i18n-xlsx-loader",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Directly import an XLSX file in your project as source for i18n locales messages.",
   "main": "dist/index.js",
   "files": [
