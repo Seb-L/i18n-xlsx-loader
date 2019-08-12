@@ -53,13 +53,13 @@ export const en = {
 ## Install
 
 ```bash
-yarn add i18n-xlsx-loader -D
+yarn add @seb-l/i18n-xlsx-loader -D
 ```
 
 or
 
 ```bash
-npm install i18n-xlsx-loader -D
+npm install @seb-l/i18n-xlsx-loader -D
 ```
 
 ## Usage
@@ -78,7 +78,7 @@ const path = require('path')
       {
         test: path.resolve('locales/translations.xlsx'),
         use: {
-          loader: 'i18n-xlsx-loader'
+          loader: '@seb-l/i18n-xlsx-loader'
         },
       },
     ],
@@ -98,7 +98,7 @@ const path = require('path')
     config.module.rules.push(
       {
         test: path.resolve('locales/translations.xlsx'),
-        loader: 'i18n-xlsx-loader',
+        loader: '@seb-l/i18n-xlsx-loader',
       }
     )
   }
