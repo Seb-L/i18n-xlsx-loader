@@ -10,22 +10,13 @@ stages:
 
 jobs:
   include:
-    - stage: build
-      before_script: yarn
-      skip_cleanup: true
-      script:
-        - yarn build
-
     - stage: test
-      before_script: yarn
-      skip_cleanup: true
+      before_script: yarn && yarn build
       script:
         - yarn test
-
-    - stage: release
-      before_script: yarn
       deploy:
         provider: script
         skip_cleanup: true
         script:
-          - npx semantic-release
+          # - npx semantic-release
+          - echo 'Deploying!'
